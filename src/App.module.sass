@@ -1,0 +1,67 @@
+@import './style/_mixin'
+	
+// npm i sass
+$spacing1: 0.625rem
+$bg1: rgba(120, 120, 120, 0.1)
+$rb1: 1.25rem
+
+body 
+	overflow: hidden
+
+.App
+	text-align: center
+
+.App_header
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	font-size: calc(10px + 2vmin)
+	min-height: 100vh
+	color: white
+	background-color: #282c34
+
+.globe_menu 
+	position: absolute
+	top: $spacing1
+	left: $spacing1
+	text-align: left
+	pointer-events: none
+	.toggle_btn
+		margin-bottom: 1rem
+		font-size: 2.25rem
+		color: white
+		background: transparent
+		border: 0
+		cursor: pointer
+		pointer-events: auto
+	.base_content
+		@include size(100%, auto)
+		position: relative
+		display: flex
+		flex-direction: column
+		gap: 1.5rem
+		padding: 1rem 0.15rem 1.5rem 1.5rem
+		background-color: $bg1
+		backdrop-filter: blur(3px)
+		border-radius: 0 $rb1 $rb1 0
+		box-shadow: 16px 16px 24px 0px rgba(0, 0, 0, 0.75)
+		transform: translateX(-(calc($spacing1 * 1.5)))
+		transition: transform 0.3s ease-in-out
+		pointer-events: auto
+		&.toggle_content
+			transform: translateX(-150%)
+
+.time_log 
+	font-family: sans-serif
+	position: absolute
+	bottom: $spacing1
+	left: $spacing1
+	right: $spacing1
+	padding: 5px
+	margin-left: auto
+	font-size: 12px
+	width: max-content
+	color: lavender
+	background-color: $bg1
+	border-radius: 3px

@@ -1,0 +1,59 @@
+@import '../style/_mixin'
+@import '../style/_variable'
+
+$width: 270px
+    
+// Custom Checkbox
+.cs_cb
+    display: grid
+    align-items: center
+    grid-template-columns: 1em auto
+    gap: 0.5em
+    input[type="checkbox"]
+        @include size(1.4rem) // 1.15em
+        appearance: none
+        display: grid
+        place-content: center
+        margin: 0
+        font: inherit
+        color: currentColor
+        border: 2px solid $primaryColorDarken
+        background-color: $backgroundColor
+        box-shadow: 2px 2px 5px 0px rgba(255,186,83,1), 4px 4px 12px 3px rgba(255,192,98,1)
+        &::before
+            @include size(0.65rem) // 0.65em
+            content: ""
+            transform: scale(0)
+            transition: 120ms transform ease-in-out
+            box-shadow: inset 1em 1em $primaryColor
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%)
+        &:checked::before
+            transform: scale(1)
+    span
+        margin-left: 0.25rem // 0.5em
+        color: $primaryColor
+        font-weight: 700
+        font-size: 14px // 0.75em
+        text-shadow: #4e441a 1px 0 10px
+
+.cs_cp
+    position: relative
+    button
+        width: $width
+        padding: 0.45rem 0.65rem
+        border: 3px solid $primaryColor
+        border-radius: 4px
+        box-shadow: 2px 2px 6px 0px rgba(255,186,83,1), 4px 4px 12px 3px rgba(255,192,98,1)
+    span
+        white-space: nowrap
+        font-weight: 700
+        font-size: 14px
+        color: $textColor
+        mix-blend-mode: difference
+    > div 
+        position: absolute
+        width: calc($width - 20px) !important
+        background: rgba(120,120,120,0.18) !important
+        z-index: 2
+        label
+            color: $textColor !important
