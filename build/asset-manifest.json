@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/npm%20run%20deploy/static/css/main.7933ab9f.css",
+    "main.js": "/npm%20run%20deploy/static/js/main.f0b76b1d.js",
+    "static/js/787.0839f4e5.chunk.js": "/npm%20run%20deploy/static/js/787.0839f4e5.chunk.js",
+    "static/media/earth-clouds.png": "/npm%20run%20deploy/static/media/earth-clouds.67a542cb789140671d24.png",
+    "static/media/ne_110m_admin_0_countries.geojson": "/npm%20run%20deploy/static/media/ne_110m_admin_0_countries.023abdfee8835e299f6b.geojson",
+    "index.html": "/npm%20run%20deploy/index.html",
+    "main.7933ab9f.css.map": "/npm%20run%20deploy/static/css/main.7933ab9f.css.map",
+    "main.f0b76b1d.js.map": "/npm%20run%20deploy/static/js/main.f0b76b1d.js.map",
+    "787.0839f4e5.chunk.js.map": "/npm%20run%20deploy/static/js/787.0839f4e5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7933ab9f.css",
+    "static/js/main.f0b76b1d.js"
+  ]
+}
