@@ -14,7 +14,7 @@ import style from "./App.module.sass";
 // npm install --save @fortawesome/free-solid-svg-icons
 // npm install --save @fortawesome/react-fontawesome
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGears} from "@fortawesome/free-solid-svg-icons";
+import {faGears, faHouseFlag} from "@fortawesome/free-solid-svg-icons";
 import {useTranslation} from "react-i18next";
 
 const ARC_REL_LEN = 0.4; // relative to whole arc
@@ -270,6 +270,9 @@ const App = () => {
 
 				{/* --------------------------- Menu --------------------------- */}
 				<div className={style.globe_menu}>
+					<button className={style.toggle_btn} onClick={() => window.location.href = "\\"}>
+						<FontAwesomeIcon icon={faHouseFlag} />
+					</button>
 					<button className={style.toggle_btn} onClick={() => setToggleFlag(!toggleFlag)}>
 						<FontAwesomeIcon icon={faGears} />
 					</button>
